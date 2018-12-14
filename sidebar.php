@@ -7,7 +7,7 @@
  * @package Gautam
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar-1' ) || get_option( 'blog_sidebar', 'No' ) == 'No' ) {
 	return;
 }
 ?>
