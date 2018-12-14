@@ -10,6 +10,19 @@
  */
 
 ?>
+
+<?php
+$fixed_header = get_option( 'fixed_header', 'Yes' );
+
+if ( $fixed_header == 'No' ) {
+	$fixed_header         = "";
+	$main_content_padding = '';
+} else {
+	$fixed_header         = 'fixed-header';
+	$main_content_padding = 'main-content-padding';
+}
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -79,8 +92,9 @@ $boxed_layout = get_option( 'boxed_layout', "" )
                     aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gautam' ); ?></button>
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
+				'theme_location'  => 'menu-1',
+				'menu_id'         => 'primary-menu',
+				'container_class' => 'nav-menu'
 			) );
 			?>
         </nav><!-- #site-navigation -->

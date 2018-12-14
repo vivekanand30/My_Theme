@@ -27,6 +27,16 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'gautam' ), 'gautam', '<a href="http://iPowerUser.com">iPowerUser</a>' );
 				?>
 		</div><!-- .site-info -->
+
+        <div class="site-info">
+            <p>
+                <?php
+                $copyright_text = stripcslashes( get_option( 'copyright_text', "" ) );
+
+                echo esc_url($copyright_text);
+                ?>
+            </p>
+        </div> <!-- Copyright test-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

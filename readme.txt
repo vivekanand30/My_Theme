@@ -13,7 +13,7 @@ A starter theme called Gautam.
 
 == Description ==
 
-Gautam Theme
+iPowerUser.com
 
 == Installation ==
 

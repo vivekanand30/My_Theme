@@ -51,8 +51,11 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
+                'short_ping'  => true,
+                'avatar_size' => 100,
+                'format'      => 'html5',
+                'style'       => 'ol',
+                'callback'   => 'gautam_theme_comment'
 			) );
 			?>
 		</ol><!-- .comment-list -->
